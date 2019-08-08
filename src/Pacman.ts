@@ -29,7 +29,6 @@ class Pacman extends GameObject implements RenderedObject {
     const newMouthValue = this.isOpeningMouth
       ? this.howOpen + step
       : this.howOpen - step;
-    console.log(newMouthValue);
     this.setHowOpen(newMouthValue);
   }
 

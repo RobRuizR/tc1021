@@ -14,6 +14,8 @@ class Asteroid extends GameObject implements RenderedObject {
   private x: number;
   private y: number;
   private sections: number[];
+  private angle: number = 0;
+  private previousUpdateTime: Date;
 
   constructor(context: CanvasRenderingContext2D, options?: AsteroidOptions) {
     super(context);
@@ -24,6 +26,7 @@ class Asteroid extends GameObject implements RenderedObject {
       segments: 16,
       noise: 0.4,
     };
+    this.previousUpdateTime = new Date();
     const width = this.getCanvasWidth();
     const height = this.getCanvasHeight();
 
@@ -39,16 +42,30 @@ class Asteroid extends GameObject implements RenderedObject {
     }
   }
 
-  update() {}
+  private setAngle(angle: number) {
+    this.angle = angle;
+  }
+
+  update() {
+    const currentAngle = this.angle;
+    const currentTime = new Date();
+    const deltaTimeSeconds =
+      (Number(currentTime) - Number(this.previousUpdateTime)) / 1000;
+
+    // Update angle based on the time that has passed since last update
+    this.setAngle((currentAngle + 3 * deltaTimeSeconds) % 360);
+    this.previousUpdateTime = currentTime;
+  }
 
   render() {
-    const { context, options, x, y, sections } = this;
+    const { context, options, x, y, sections, angle } = this;
     const { fillStyle, strokeStyle, radius, segments } = options;
 
     context.save();
     context.beginPath();
 
     context.translate(x, y);
+    context.rotate(angle);
     context.strokeStyle = strokeStyle;
     context.fillStyle = fillStyle;
     for (let i = 0; i < segments; i++) {

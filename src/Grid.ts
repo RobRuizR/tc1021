@@ -1,5 +1,5 @@
 import defaults from "lodash.defaults";
-import GameObject from "./GameObject";
+import GameObject, { RenderedObject } from "./GameObject";
 
 type GridOptions = {
   strokeColor?: string;
@@ -11,7 +11,7 @@ type GridOptions = {
   labelColor?: string;
 };
 
-class Grid extends GameObject {
+class Grid extends GameObject implements RenderedObject {
   private options: GridOptions;
 
   constructor(context: CanvasRenderingContext2D, options?: GridOptions) {
@@ -27,6 +27,8 @@ class Grid extends GameObject {
     };
     this.options = defaults(options, defaultOptions);
   }
+
+  update() {}
 
   render() {
     if (!this.debugMode) return;
