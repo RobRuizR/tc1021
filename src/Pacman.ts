@@ -1,6 +1,6 @@
-import GameObject from "./GameObject";
+import GameObject, { RenderedObject } from "./GameObject";
 
-class Pacman extends GameObject {
+class Pacman extends GameObject implements RenderedObject {
   private currentX: number = 200;
   private currentY: number = 200;
   private radius: number = 100;

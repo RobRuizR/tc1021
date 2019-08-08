@@ -14,4 +14,4 @@ setInterval(() => {
   myDrawing.render();
   pacman.update();
   pacman.render();
-}, 1000 / 40);
+}, 1000 / 50);
