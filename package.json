@@ -9,7 +9,9 @@
     "develop": "parcel index.html -p 8000",
     "format": "prettier --write src/**/*.{js,jsx}"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash.defaults": "^4.2.0"
+  },
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
     "prettier": "^1.18.2",
