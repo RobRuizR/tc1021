@@ -7,10 +7,6 @@ class Pacman extends GameObject implements RenderedObject {
   private howOpen: number = 0;
   private isOpeningMouth: boolean = true;
 
-  constructor(context) {
-    super(context);
-  }
-
   private setHowOpen(howOpen: number) {
     this.howOpen = howOpen;
   }

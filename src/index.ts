@@ -1,17 +1,20 @@
 import Grid from "./Grid";
-import Pacman from "./Pacman";
+import Ship from "./Ship";
+import Asteroid from "./Asteroid";
 
 const canv = document.getElementById("game-area") as HTMLCanvasElement;
 const context: CanvasRenderingContext2D = canv.getContext("2d");
-const myDrawing = new Grid(context, {
+const myGrid = new Grid(context, {
   strokeColor: "teal",
   labelColor: "#333",
 });
-const pacman = new Pacman(context);
+const ship = new Ship(context);
+const asteroids: Asteroid[] = [];
 
-setInterval(() => {
-  context.clearRect(0, 0, canv.width, canv.height);
-  myDrawing.render();
-  pacman.update();
-  pacman.render();
-}, 1000 / 50);
+for (let i = 0; i < 5; i++) {
+  asteroids.push(new Asteroid(context));
+}
+
+myGrid.render();
+ship.render();
+asteroids.forEach(asteroid => asteroid.render());
