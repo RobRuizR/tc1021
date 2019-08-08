@@ -10,13 +10,13 @@ Repositorio para el curso TC-1021, Desarrollo de Videojuegos.
 ## Instalación
 
 > Para hacer uso de este repositorio es necesario tener insatalado 
-[node](https://nodejs.org/en/) en tu equipo. 
+> [node](https://nodejs.org/en/) en tu equipo. 
 
 - Descarga el contenido de este repositorio, extraelo y abre una terminal de 
 comandos en la carpeta resultante.
 - Instala las dependencias del proyecto haciendo uso del comando `npm install`
 - Una vez terminada la instalación, puedes ejecutar el proyecto con el comando
-`npm run develop.`
+`npm run develop`.
 
 ## Bundling
 
