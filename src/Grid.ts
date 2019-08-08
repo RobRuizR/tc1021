@@ -1,7 +1,7 @@
 import defaults from "lodash.defaults";
 import GameObject from "./GameObject";
 
-interface GridOptions {
+type GridOptions = {
   strokeColor?: string;
   mainLineWidth?: number;
   secondaryLineWidth?: number;
@@ -9,7 +9,7 @@ interface GridOptions {
   bigStep?: number;
   includeLabels?: boolean;
   labelColor?: string;
-}
+};
 
 class Grid extends GameObject {
   private options: GridOptions;
