@@ -42,11 +42,11 @@ Con esto, deberías poder ver un `canvas` con el que podrás interactuar por med
 
 Abre ahora tu archivo `index.ts` y escribe lo siguiente:
 
+![Código de la actividad](https://github.com/RobRuizR/tc1021/blob/master/actividades/assets/actividad2-01.png?raw=true)
 
 Crea tu primera figura usando los siguientes comandos:
 
-
-
+![Código de la actividad](https://github.com/RobRuizR/tc1021/blob/master/actividades/assets/actividad2-02.png?raw=true)
 
 Finalmente, prueba dibujando un círculo en la parte superior izquierda con la siguiente función:
 
