@@ -48,14 +48,22 @@ Crea tu primera figura usando los siguientes comandos:
 
 ![Código de la actividad](https://github.com/RobRuizR/tc1021/blob/master/actividades/assets/actividad2-02.png?raw=true)
 
-Finalmente, prueba dibujando un círculo en la parte superior izquierda con la siguiente función:
+¿Qué es lo que ves?
+
+---
+
+Deberías poder ver un cuadrado morado al centro de tu documento.
+
+Si sí, ¡Felicidades! Hiciste tu primer dibujo con Typescript.
+
+Prueba ahora dibujando un círculo en la parte superior izquierda con la siguiente función:
 
 
 ```js
 // Puedes leer más sobre este método en la documentación oficial:
 // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse
 context.ellipse(x, y, radioX, radioY, rotación, anguloInicial, anguloFinal);
-// Ejemplo: context.ellipse(x, y, 50, 50, 0, 0, Math.PI * 2)
+// Ejemplo: context.ellipse(x, y, 100, 50, 0, 0, Math.PI * 2)
 
 1. x: coordenada X que indica el centro de la elipse.
 2. y: coordenada Y del centro.
